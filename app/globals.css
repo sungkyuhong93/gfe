@@ -1,3 +1,4 @@
+@import "./styles/tokens.css";
 @import "tailwindcss";
 
 :root {
@@ -8,8 +9,131 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+
+  /*
+   * Design tokens → utilities (Tailwind v4 @theme)
+   * --color-*  → bg-* / text-* / border-* / ring-* / etc.
+   * --text-*   → text-* font-size recipes (not the same as text color!)
+   * --font-weight-* → font-*
+   */
+  --color-ink-primary: var(--text-primary);
+  --color-ink-secondary: var(--text-secondary);
+  --color-ink-muted: var(--text-tertiary);
+  --color-ink-error: var(--text-error);
+  --color-ink-success: var(--text-success);
+  --color-ink-warning: var(--text-warning);
+  --color-ink-disabled: var(--text-disabled);
+  --color-ink-brand: var(--text-brand);
+  --color-ink-primary-hover: var(--text-primary-hover);
+  --color-ink-primary-invert: var(--text-primary-invert);
+  
+  --color-surface: var(--bg-primary);
+  --color-surface-inverted: var(--bg-primary-inverted);
+  --color-surface-hover: var(--bg-primary-hover);
+  --color-surface-secondary: var(--bg-secondary);
+  --color-surface-secondary-hover: var(--bg-secondary-hover);
+  --color-surface-tertiary: var(--bg-tertiary);
+  --color-surface-disabled: var(--bg-disabled);
+  --color-surface-disabled-emphasize: var(--bg-disabled-emphasize);
+  --color-surface-brand-primary: var(--bg-brand-primary);
+  --color-surface-brand-primary-emphasize: var(--bg-brand-primary-emphasize);
+  --color-surface-error: var(--bg-error);
+  --color-surface-error-emphasize: var(--bg-error-emphasize);
+  --color-surface-error-subtle: var(--bg-error-subtle);
+  --color-surface-success-subtle: var(--bg-success-subtle);
+  --color-surface-brand-subtle: var(--bg-brand-subtle);
+  --color-surface-neutral-subtle: var(--bg-neutral-subtle);
+  --color-surface-warning-subtle: var(--bg-warning-subtle);
+
+  /* Line colors (borders / rings / outlines) */
+  --color-line-primary: var(--line-primary);
+  --color-line-secondary: var(--line-secondary);
+  --color-line-success: var(--line-success);
+  --color-line-brand-solid: var(--line-brand-solid);
+  --color-line-brand-subtle: var(--line-brand-subtle);
+  --color-line-error-subtle: var(--line-error-subtle);
+  --color-line-warning-subtle: var(--line-warning-subtle);
+
+  /* Icon colors */
+  --color-icon-emphasize: var(--icon-emphasize);
+  --color-icon-primary: var(--icon-primary);
+  --color-icon-primary-hover: var(--icon-primary-hover);
+  --color-icon-brand: var(--icon-brand);
+  --color-icon-brand-background: var(--icon-brand-background);
+  --color-icon-success: var(--icon-success);
+  --color-icon-error: var(--icon-error);
+  --color-icon-warning: var(--icon-warning);
+
+  /* Form colors */
+  --color-form-text-title: var(--form-text-title);
+  --color-form-text-placeholder: var(--form-text-placeholder);
+  --color-form-text-hint: var(--form-text-hint);
+  --color-form-text-filled: var(--form-text-filled);
+  --color-form-text-disabled: var(--form-text-disabled);
+  --color-form-text-error: var(--form-text-error);
+  --color-form-background: var(--form-background);
+  --color-form-border: var(--form-border);
+
+  /*
+   * Breakpoints (Tailwind v4 @theme)
+   * Mobile-first: base styles apply < tablet.
+   * Figma artboards: 375 / 768 / 1440.
+   */
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1440px;
+
+  /* Spacing aliases (gutters) */
+  --spacing-gutter-mobile: var(--page-gutter-mobile);
+  --spacing-gutter-tablet: var(--page-gutter-tablet-up);
+
+  /*
+   * Font-size scale aliases (from tokens.css)
+   * This lets you use Tailwind's built-in `text-xs` … `text-6xl` utilities,
+   * but backed by your design tokens.
+   */
+  --text-xs: var(--font-size-xs);
+  --text-xs--line-height: var(--line-height-xs);
+  --text-sm: var(--font-size-sm);
+  --text-sm--line-height: var(--line-height-sm);
+  --text-base: var(--font-size-base);
+  --text-base--line-height: var(--line-height-base);
+  --text-lg: var(--font-size-lg);
+  --text-lg--line-height: var(--line-height-lg);
+  --text-xl: var(--font-size-xl);
+  --text-xl--line-height: var(--line-height-xl);
+  --text-2xl: var(--font-size-2xl);
+  --text-2xl--line-height: var(--line-height-2xl);
+  --text-3xl: var(--font-size-3xl);
+  --text-3xl--line-height: var(--line-height-3xl);
+  --text-4xl: var(--font-size-4xl);
+  --text-4xl--line-height: var(--line-height-4xl);
+  --text-5xl: var(--font-size-5xl);
+  --text-5xl--line-height: var(--line-height-5xl);
+  --text-6xl: var(--font-size-6xl);
+  --text-6xl--line-height: var(--line-height-6xl);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  background: linear-gradient(147.52deg, #f9fafb 8.89%, #d2d6db 100.48%);
+}
+
+.testimonial-card {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.06);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,10 +141,8 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    background: var(--background);
+  }
 }

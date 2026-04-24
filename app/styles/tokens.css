@@ -1,0 +1,128 @@
+:root {
+  /* Text colors (GreatFrontEnd style guide) */
+  --text-primary: #171717;
+  --text-primary-hover: #0a0a0a;
+  --text-primary-invert: #ffffff;
+
+  --text-secondary: #525252;
+  --text-tertiary: #737373;
+  --text-brand: #4338ca;
+  --text-disabled: #a3a3a3;
+
+  --text-error: #dc2626;
+  --text-error-emphasize: #991b1b;
+  --text-success: #15803d;
+  --text-warning: #a16207;
+
+  /*
+   * Typography (GreatFrontEnd style guide)
+   * Family: Noto Sans — loaded via next/font in app/layout.tsx (`--font-sans`).
+   * Weights 100–900 exist; challenges mainly use 400–600.
+   */
+  --font-weight-normal: 400; /* body — Tailwind: font-normal */
+  --font-weight-medium: 500; /* buttons, labels, links — font-medium */
+  --font-weight-semibold: 600; /* headings — font-semibold */
+
+  /* Semantic aliases (same numbers, role-based naming) */
+  --font-weight-body: var(--font-weight-normal);
+  --font-weight-ui: var(--font-weight-medium);
+  --font-weight-heading: var(--font-weight-semibold);
+
+  /*
+   * Font sizes & line heights — Tailwind default scale (GreatFrontEnd style guide)
+   * Pairs match `text-xs` … `text-6xl`. In JSX you can still use those classes;
+   * use these tokens when you want explicit px or non-Tailwind CSS.
+   */
+  --font-size-xs: 12px;
+  --line-height-xs: 16px;
+  --font-size-sm: 14px;
+  --line-height-sm: 20px;
+  --font-size-base: 16px;
+  --line-height-base: 24px;
+  --font-size-lg: 18px;
+  --line-height-lg: 28px;
+  --font-size-xl: 20px;
+  --line-height-xl: 28px;
+  --font-size-2xl: 24px;
+  --line-height-2xl: 32px;
+  --font-size-3xl: 30px;
+  --line-height-3xl: 36px;
+  --font-size-4xl: 36px;
+  --line-height-4xl: 40px;
+  --font-size-5xl: 48px;
+  --line-height-5xl: 48px;
+  --font-size-6xl: 60px;
+  --line-height-6xl: 60px;
+
+  /* Background colors (GreatFrontEnd style guide) */
+  --bg-primary: #ffffff;
+  --bg-primary-inverted: #0a0a0a;
+  --bg-primary-hover: #fafafa;
+  --bg-secondary: #e5e7eb;
+  --bg-secondary-hover: #d1d5db;
+  --bg-tertiary: #fafafa;
+  --bg-disabled: #f5f5f5;
+  --bg-disabled-emphasize: #f3f4f6;
+  --bg-brand-primary: #4338ca;
+  --bg-brand-primary-emphasize: #3730a3;
+  --bg-error: #dc2626;
+  --bg-error-emphasize: #b91c1c;
+  --bg-error-subtle: #fef2f2;
+  --bg-success-subtle: #f0fdf4;
+  --bg-brand-subtle: #eef2ff;
+  --bg-neutral-subtle: #f9fafb;
+  --bg-warning-subtle: #fffbeb;
+
+  /* Line colors — borders / rings / outlines (GreatFrontEnd style guide) */
+  --line-primary: #e5e5e5;
+  --line-secondary: #9ca3af;
+  --line-success: #bbf7d0;
+  --line-brand-solid: #4f46e5;
+  --line-brand-subtle: #c7d2fe;
+  --line-error-subtle: #fecaca;
+  --line-warning-subtle: #fde68a;
+
+  /* Icon colors (GreatFrontEnd style guide) */
+  --icon-emphasize: #404040;
+  --icon-primary: #a3a3a3;
+  --icon-primary-hover: #737373;
+  --icon-brand: #6366f1;
+  --icon-brand-background: #eef2ff;
+  --icon-success: #15803d;
+  --icon-error: #dc2626;
+  --icon-warning: #facc15;
+
+  /* Input, form, textarea (GreatFrontEnd style guide) */
+  --form-text-title: #404040;
+  --form-text-placeholder: #737373;
+  --form-text-hint: #737373;
+  --form-text-filled: #171717;
+  --form-text-disabled: #a3a3a3;
+  --form-text-error: #dc2626;
+  --form-background: #fafafa;
+  --form-border: #e5e5e5;
+
+  /*
+   * Layout — device breakpoints & grid (GreatFrontEnd style guide)
+   * Artboard widths = design reference; min-width tokens = typical @media cutoffs.
+   * Note: most browsers still require raw px in @media (…); use the same numbers there
+   * or map these into Tailwind @theme breakpoints.
+   */
+  --layout-artboard-mobile: 375px;
+  --layout-artboard-tablet: 768px;
+  --layout-artboard-desktop: 1440px;
+
+  --breakpoint-min-tablet: 768px;
+  --breakpoint-min-desktop: 1024px;
+
+  --container-max-width: 1280px;
+  --page-gutter-mobile: 16px;
+  --page-gutter-tablet-up: 32px;
+
+  --grid-columns-mobile: 4;
+  --grid-columns-tablet: 6;
+  --grid-columns-desktop: 12;
+  --grid-gap-mobile: 16px;
+  --grid-gap-tablet-up: 32px;
+}
+
