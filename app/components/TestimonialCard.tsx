@@ -36,7 +36,7 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 
         <blockquote className="text-base text-ink-secondary text-pretty">
           <p className="break-words [overflow-wrap:anywhere]">
-            “{testimonial.quote}”
+            {testimonial.quote}
           </p>
         </blockquote>
       </figure>

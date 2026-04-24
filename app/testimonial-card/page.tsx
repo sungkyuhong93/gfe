@@ -8,7 +8,7 @@ export default function TestimonialCardPage() {
           name: "Sarah Dole",
           username: "@sarahdole",
           quote:
-            "I’ve been searching for high-quality abstract images for my design projects, and I’m thrilled to have found this platform. The variety and depth of creativity are outstanding!",
+            "I've been searching for high-quality abstract images for my design projects, and I'm thrilled to have found this platform. The variety and depth of creativity are astounding!",
           avatarSrc: "/profile-thumbnail.png",
           avatarAlt: "Sarah Dole",
         }}
