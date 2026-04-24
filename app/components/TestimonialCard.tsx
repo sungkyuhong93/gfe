@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from "./TestimonialCard.module.css";
 
 type Testimonial = {
   name: string;
@@ -11,7 +12,7 @@ type Testimonial = {
 export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
     <article
-      className="testimonial-card max-w-[340px] bg-surface mx-auto rounded-[8px] mt-[200px] p-6 ring-1 ring-black/5"
+      className={`${styles.card} max-w-[340px] bg-surface mx-auto rounded-[8px] mt-[200px] p-6 ring-1 ring-black/5`}
     >
       <figure className="flex flex-col gap-4">
         <figcaption className="flex items-center gap-4">
