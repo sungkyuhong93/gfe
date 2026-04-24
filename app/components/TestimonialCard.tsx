@@ -35,7 +35,9 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
         </figcaption>
 
         <blockquote className="text-base text-ink-secondary text-pretty">
-          <p className="break-words [overflow-wrap:anywhere]">"{testimonial.quote}"</p>
+          <p className="break-words [overflow-wrap:anywhere]">
+            “{testimonial.quote}”
+          </p>
         </blockquote>
       </figure>
     </article>
